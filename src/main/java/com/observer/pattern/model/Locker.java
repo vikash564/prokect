@@ -7,17 +7,18 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class KafkaPojo {
+public class Locker {
 
     private OrderState state;
 
     @JsonAlias({"created_at" , "createdAt"})
-    private long createdAt;
+    private Long createdAt;
 
-    private String metadata;
+    private Long doorId;
 
-    @JsonAlias({"cancelReason", "cancel_reason"})
-    private String cancelReason;
+    private Long lockerId;
+
+    private String status;
 
 
 }

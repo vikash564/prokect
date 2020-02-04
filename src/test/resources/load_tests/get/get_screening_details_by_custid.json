@@ -1,0 +1,16 @@
+{
+  "scenarioName": "Screening API- Get Screening by customerId test",
+  "steps": [
+    {
+      "name": "get_screening_details",
+      "url": "/api/test/v1/locker/1",
+      "operation" : "GET",
+      "request": {
+      },
+      "verify": {
+        "status": 200
+      }
+    }
+
+  ]
+}

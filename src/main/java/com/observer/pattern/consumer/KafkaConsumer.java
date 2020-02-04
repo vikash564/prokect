@@ -2,9 +2,9 @@ package com.observer.pattern.consumer;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.observer.pattern.model.KafkaPojo;
+import com.observer.pattern.model.Locker;
 import com.observer.pattern.service.DataPushHandler;
-import com.observer.pattern.service.DataPushHandlerFactory;
+import com.observer.pattern.service.impl.DataPushHandlerFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -23,8 +23,8 @@ public class KafkaConsumer {
     private void consumeMessages(String message) {
         log.info("Consumed Message: {}", message);
         try {
-            KafkaPojo request = objectMapper.readValue(message, KafkaPojo.class);
-            processOrderRequest(request);
+//            Locker request = objectMapper.readValue(message, Locker.class);
+//            processOrderRequest(request);
         } catch (Exception e) {
             log.error("Kafka Input Parsing Exception: {}", e);
             return;
@@ -32,7 +32,7 @@ public class KafkaConsumer {
 
     }
 
-    private void processOrderRequest(KafkaPojo request) {
+    private void processOrderRequest(Locker request) {
 
         if (request != null) {
             log.info("Input Order state :" + request);

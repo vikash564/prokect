@@ -1,9 +1,9 @@
 package com.observer.pattern;
 
 
-import com.observer.pattern.accept.AcceptedStateEventListner;
-import com.observer.pattern.cancel.CancelledStateEventListner;
-import com.observer.pattern.complete.CompletedStateEventListner;
+import com.observer.pattern.listner.AcceptedStateEventListner;
+import com.observer.pattern.listner.CancelledStateEventListner;
+import com.observer.pattern.listner.CompletedStateEventListner;
 import com.observer.pattern.handler.CancelledStatusHandler;
 import com.observer.pattern.handler.CompletedStatusHandler;
 import com.observer.pattern.handler.NewStatusHandler;
